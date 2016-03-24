@@ -6,10 +6,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
 
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ViewInject;
 import com.rambo.marketposter.R;
 import com.squareup.picasso.Picasso;
-
-import org.xutils.view.annotation.ViewInject;
 
 
 /**
@@ -26,14 +26,14 @@ public class SplashActiivty extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_splash);
-
-        handler.sendEmptyMessageDelayed(0, 2000);
+        ViewUtils.inject(this);
+        handler.sendEmptyMessageDelayed(0, 3000);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Picasso.with(this).load("http://a.hiphotos.baidu.com/news/q%3D100/sign=a16e08fd31d3d539c73d0bc30a86e927/e61190ef76c6a7efa69f8025fafaaf51f3de6673.jpg").into(imgSplash);
+        Picasso.with(SplashActiivty.this).load("http://img6.cache.netease.com/photo/0001/2016-03-23/BISIUFT657KT0001.jpg").into(imgSplash);
     }
 
     Handler handler = new Handler() {
