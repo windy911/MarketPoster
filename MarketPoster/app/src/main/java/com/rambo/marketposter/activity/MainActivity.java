@@ -1,6 +1,9 @@
 package com.rambo.marketposter.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -10,6 +13,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.rambo.marketposter.R;
 import com.rambo.marketposter.utils.ToastUtil;
+import com.rambo.marketposter.widget.DialogUtils;
 
 public class MainActivity extends Activity {
 
@@ -39,6 +43,17 @@ public class MainActivity extends Activity {
         switch (view.getId()) {
             case R.id.tvTest0:
                 ToastUtil.show(MainActivity.this, "tvTest0");
+                DialogUtils.createDialog(MainActivity.this, "测试TITLE", "测试CONTENT", "以后再说", "现在就去", new DialogUtils.OnItemSelected() {
+                    @Override
+                    public int ItemSelected(int seleced) {
+                        if(RESULT_CANCEL == seleced){
+                            ToastUtil.show(MainActivity.this,"以后再说");
+                        }else if(RESULT_CONFIRM == seleced){
+                            ToastUtil.show(MainActivity.this,"现在就去");
+                        }
+                        return 0;
+                    }
+                });
                 break;
             case R.id.tvTest1:
                 ToastUtil.show(MainActivity.this, "tvTest1");
