@@ -1,5 +1,10 @@
 package com.rambo.marketposter.utils;
 
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /*
  * Tools for String
  */
@@ -29,4 +34,23 @@ public class StringUtil {
         if (" ".equals(str)) return true;
         else return false;
     }
+
+    public static String getTime() {
+        return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA)
+                .format(new Date());
+    }
+
+    public static String getDouble(double d1) {
+        DecimalFormat df = new DecimalFormat("######0.00");
+        String result = df.format(d1);
+//        if (result.endsWith(".00")) {
+//            result = result.replace(".00", "");
+//        }
+
+//        if (result.contains(".") && result.endsWith("0")) {
+//            result = result.substring(0, result.length() - 1);
+//        }
+        return result;
+    }
+
 }

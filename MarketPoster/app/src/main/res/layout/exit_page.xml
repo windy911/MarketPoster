@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlExit"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgExit"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/exit" />
+
+    <TextView
+        android:id="@+id/tvGridItem"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgExit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="回到首页"
+        android:textColor="@color/text_666666"
+        android:textSize="@dimen/font_small" />
+
+</RelativeLayout>

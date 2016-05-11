@@ -1,6 +1,6 @@
 package com.rambo.marketposter.network.response;
 
-import com.rambo.marketposter.data.bean.Feed;
+import com.rambo.marketposter.data.feeds.Feed;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;

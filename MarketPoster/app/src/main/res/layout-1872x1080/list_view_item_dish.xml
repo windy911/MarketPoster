@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cbDelDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:button="@drawable/checkbox_selector"
+        android:paddingLeft="10dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgDishPic"
+        android:layout_width="400dp"
+        android:layout_height="210dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/cbDelDish"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgDishPic"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tvDisahName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="胡萝卜"
+            android:textColor="@color/text_black_alpha90"
+            android:textSize="@dimen/font_middle" />
+
+        <TextView
+            android:id="@+id/tvDisahDanJia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDisahName"
+            android:layout_marginTop="@dimen/line_space_height"
+            android:text="单价：3.00元／斤"
+            android:textColor="@color/text_666666"
+            android:textSize="@dimen/font_very_small" />
+
+        <TextView
+            android:id="@+id/tvDisahGuiGe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDisahDanJia"
+            android:layout_marginTop="@dimen/line_space_height"
+            android:text="规格：3斤／袋"
+            android:textColor="@color/text_666666"
+            android:textSize="@dimen/font_very_small" />
+
+        <LinearLayout
+            android:id="@+id/llJiaGe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDisahGuiGe">
+
+            <TextView
+                android:id="@+id/tvDisahJiaGe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line_space_height"
+                android:text="价格：9.00元"
+                android:textColor="@color/text_666666"
+                android:textSize="@dimen/font_very_small" />
+
+            <TextView
+                android:id="@+id/tvDisahJiaGe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/line_space_height"
+                android:text="价格：9.00元"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/font_very_small"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llJiaGe"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/tvDel"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/del_selector"
+                android:gravity="center"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:id="@+id/tvCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_toRightOf="@id/tvDel"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/font_middle" />
+
+            <Button
+                android:id="@+id/tvAdd"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/tvCounter"
+                android:background="@drawable/add_selector"
+                android:gravity="center"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/font_middle" />
+
+
+            <TextView
+                android:id="@+id/tvDishResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:text="已售罄"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/font_middle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFavor"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="75dp"
+            android:gravity="left">
+
+            <ImageButton
+                android:id="@+id/imgFav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/fav_selector" />
+
+            <TextView
+                android:id="@+id/tvFavNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imgFav"
+                android:text="0人喜欢"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/font_small">
+
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

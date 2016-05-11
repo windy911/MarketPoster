@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/llTop"
+        layout="@layout/head_page_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="40dp" />
+
+    <include
+        android:id="@+id/llBottom"
+        layout="@layout/bottom_app_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llBottom"
+        android:layout_below="@id/llTop"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border">
+
+        <RelativeLayout
+            android:id="@+id/rlPayResultPaying"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="请扫描下方二维码完成支付"
+                android:textSize="@dimen/font_small" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv01"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/broken_line" />
+
+
+            <ImageView
+                android:id="@+id/imgPayCode"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:layout_below="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="80dp"
+                android:background="@drawable/solid_gray" />
+
+            <TextView
+                android:id="@+id/tvPayIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgPayCode"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="15dp"
+                android:text="扫码步骤：\n1.在手机上打开微信/支付宝\n2.点击扫一扫，扫描上方二维码 \n3.确认信息并付款 \n4.点击下方我已付款"
+                android:textColor="@color/text_black_alpha90"
+                android:textSize="@dimen/font_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPayIntro"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnIPayed"
+                    android:layout_width="500dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/button"
+                    android:text="我已付款"
+                    android:textColor="@drawable/pay_text_selector"
+                    android:textSize="@dimen/font_middle" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlPayResultPayed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/llPaySuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgPaySuccess"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/complete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="支付成功"
+                    android:textColor="@color/text_black_alpha90"
+                    android:textSize="@dimen/font_big" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPayIntro2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llPaySuccess"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="15dp"
+                android:text="已成功将订单信息发送至您的手机\n请注意查收！"
+                android:textColor="@color/text_black_alpha90"
+                android:textSize="@dimen/font_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPayIntro2"
+                android:layout_marginTop="80dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvJumping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPaySuccess"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="15dp"
+                    android:text="页面即将跳转..."
+                    android:textColor="@color/text_black_alpha90"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:id="@+id/tvJumpingSeconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPaySuccess"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="5dp"
+                    android:text="60s"
+                    android:textColor="@color/tomato"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="300dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/llExit"
+                layout="@layout/exit_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnToBack" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

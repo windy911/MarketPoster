@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvDishTypeName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/type_button"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="蔬菜"
+        android:textColor="@color/text_black_alpha90"
+        android:textSize="@dimen/font_small" />
+
+</RelativeLayout>

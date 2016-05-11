@@ -1,6 +1,7 @@
 package com.rambo.marketposter.network.response;
 
-import com.rambo.marketposter.data.bean.Feed;
+import com.rambo.marketposter.data.feeds.Feed;
+import com.rambo.marketposter.utils.JsonUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,9 +16,8 @@ public class AbsBaseResponse {
 
         try {
             JSONObject json = (JSONObject) new JSONTokener(resp).nextValue();
-            feed.resCode = json.getString("resCode");
-            feed.resMsg = json.getString("resMsg");
-            feed.resData = json.getString("data");
+            feed.resCode = JsonUtil.getValueOfInt(json, "code");
+            feed.resMsg = JsonUtil.getValueOfStr(json, "message");
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_button"
+    android:paddingBottom="100dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="100dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rlLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgQr"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgQr"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="2dp"
+            android:text="扫描二维码 了解更多信息"
+            android:textColor="@color/text_black_alpha30"
+            android:textSize="@dimen/font_very_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/rlLeft">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胡萝卜"
+                android:textColor="@color/text_black_alpha90"
+                android:textSize="@dimen/font_big" />
+
+            <TextView
+                android:id="@+id/tvDishMark"
+                android:layout_width="wrap_content"
+                android:layout_height="102dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="描述：胡萝卜，胡萝卜，胡萝卜，胡萝卜，胡萝卜，"
+
+                android:textColor="@color/text_black_alpha90"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/tvDishDanJia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="单价：3.00元／斤"
+                android:textColor="@color/text_black_alpha60"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/tvDishGuiGe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="规格：3斤／袋"
+                android:textColor="@color/text_black_alpha60"
+                android:textSize="@dimen/font_small" />
+
+            <LinearLayout
+                android:id="@+id/llJiaGe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDishGuiGe"
+                android:layout_marginTop="@dimen/line_space_height">
+
+                <TextView
+                    android:id="@+id/tvDishJiaGe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/line_space_height"
+                    android:text="价格：9.00元"
+                    android:textColor="@color/text_666666"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:id="@+id/tvDishJiaGe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:text="价格：9.00元"
+                    android:textColor="@color/tomato"
+                    android:textSize="@dimen/font_small"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -14,7 +14,6 @@ import com.baidu.location.LocationClientOption;
  */
 public class MyApplication extends Application {
 
-
     public static MyApplication instance;
     private RequestQueue mQueue;
     public LocationClient mLocationClient = null;
@@ -29,10 +28,14 @@ public class MyApplication extends Application {
     }
 
     private void initApplication() {
-        mLocationClient = new LocationClient(getApplicationContext());     //声明LocationClient类
-        initLocation();
-        mLocationClient.registerLocationListener(myListener);    //注册监听函数
-        mLocationClient.start();
+//        mLocationClient = new LocationClient(getApplicationContext());     //声明LocationClient类
+//        initLocation();
+//        mLocationClient.registerLocationListener(myListener);    //注册监听函数
+//        mLocationClient.start();
+    }
+
+    public static MyApplication getAppContext() {
+        return instance;
     }
 
 

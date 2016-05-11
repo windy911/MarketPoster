@@ -2,4 +2,12 @@
     <string name="app_name">MarketPoster</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello World</string>
+
+
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">释放立即刷新</string>
+    <string name="header_hint_refresh_loading">正在刷新...</string>
+    <string name="header_hint_refresh_time">最后刷新时间：</string>
+    <string name="footer_hint_load_normal">加载更多</string>
+    <string name="footer_hint_load_ready">释放加载更多</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.rambo.marketposter.R;
+import com.rambo.marketposter.activity.Base.BaseActivity;
 import com.squareup.picasso.Picasso;
 
 

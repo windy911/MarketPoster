@@ -20,7 +20,7 @@ public class DialogUtils {
         this.mContext = context;
     }
 
-    public static Dialog createDialog(Context context, String title, String content, String cancel, String confirm,  final OnItemSelected onItemSelected) {
+    public static Dialog createDialog(Context context, String title, String content, String cancel, String confirm, final OnItemSelected onItemSelected) {
         final AlertDialog dialog = new AlertDialog.Builder(context).create();
         dialog.setCancelable(true);
         dialog.show();
@@ -52,9 +52,10 @@ public class DialogUtils {
     }
 
 
-    public static interface OnItemSelected {
-        public static int RESULT_CANCEL = 0;
-        public static int RESULT_CONFIRM = 1;
-        public int ItemSelected(int seleced);
+    public interface OnItemSelected {
+        int RESULT_CANCEL = 0;
+        int RESULT_CONFIRM = 1;
+
+        int ItemSelected(int seleced);
     }
 }

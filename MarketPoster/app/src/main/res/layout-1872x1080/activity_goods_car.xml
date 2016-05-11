@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/llTop"
+        layout="@layout/head_page_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="40dp" />
+
+    <include
+        android:id="@+id/llBottom"
+        layout="@layout/bottom_app_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llBottom"
+        android:layout_below="@id/llTop"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rlSelectorHead"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="10dp">
+
+                <CheckBox
+                    android:id="@+id/cbSelectAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_selector"
+                    android:paddingLeft="10dp"
+                    android:text="全选"
+                    android:textColor="@color/tomato"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:id="@+id/tvDelDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="删除"
+                    android:textColor="@color/tomato"
+                    android:textSize="@dimen/font_middle" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listViewDish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rlSelectorHead"
+                android:divider="@drawable/broken_line"
+                android:footerDividersEnabled="false"
+                android:dividerHeight="1dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_black_alpha60">
+
+
+            <TextView
+                android:id="@+id/tvCalcTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="选中总计：￥0.00元"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <Button
+                android:id="@+id/btnPayConfirm"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/tomato"
+                android:text="去付款"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_middle"></Button>
+
+            <Button
+                android:id="@+id/btnBackToFront"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_margin="40dp"
+                android:layout_toLeftOf="@id/btnPayConfirm"
+                android:background="@color/transparent"
+                android:text="返回列表"
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/font_middle" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

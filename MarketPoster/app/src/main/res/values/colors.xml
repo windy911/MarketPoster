@@ -7,7 +7,7 @@
 
     <color name="pink">#FFC0CB</color>
     <!--粉红色 -->
-    <color name="tomato">#FF6347</color>
+    <color name="tomato">#EB6100</color>
     <!--西红柿色 -->
     <color name="orangered">#FF4500</color>
     <!--红橙色 -->
@@ -28,6 +28,7 @@
     <color name="black_alpha20">#33000000</color>
     <color name="black_alpha10">#1A000000</color>
     <color name="black">#231815</color>
+    <color name="blue2">#6DBDE3</color>
     <color name="black2">#383C41</color>
 
     <color name="text_black">#515151</color>
@@ -89,6 +90,7 @@
     <!-- 字符串字节长度颜色; -->
     <color name="grey_bg">#3f424b</color>
     <color name="grey_thiry">#4d6f6f6f</color>
+    <color name="grey_thiry_bg">#4d6f6f6f</color>
     <color name="grey_change_thiry">#FA000000</color>
     <color name="white_thiry">#4dffffff</color>
     <color name="blue_thiry">#4d00a0ff</color>
@@ -105,6 +107,7 @@
     <color name="bg_lightgrey">#ededed</color>
     <color name="bg_grey">#efefef</color>
     <color name="bg_greywhite">#fbfbfb</color>
+    <color name="text_grey_exit">#bfbfbf</color>
     <color name="delayed">#898989</color>
     <color name="poputext">#4d4d4d</color>
     <color name="marryredtext">#FF5A5F</color>
