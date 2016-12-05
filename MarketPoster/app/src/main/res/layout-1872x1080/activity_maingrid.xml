@@ -16,13 +16,13 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="50dp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_above="@id/llBottom"
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_above="@id/llBottom"-->
 
-        android:layout_margin="20dp"
-        android:background="@drawable/white_line" />
+        <!--android:layout_margin="20dp"-->
+        <!--android:background="@drawable/white_line" />-->
 
     <GridView
         android:id="@+id/gridView"

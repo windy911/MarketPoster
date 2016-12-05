@@ -4,7 +4,9 @@ public class ApiConst {
 
 //    public static final String API_SERVER_IP = "http://210.22.128.2:6066/";
 //    public static final String API_SERVER_IP = "http://m.sumeijiaocheng.com:8084/";
-    public static final String API_SERVER_IP = "http://m.sumeijiaocheng.com:8084/";
+//    public static final String API_SERVER_IP = "http://m.sumeijiaocheng.com:8084/";
+
+    public static final String API_SERVER_IP = "http://wd.ycelz.com:8084/";
 
     //首页GRID数据
     public static final String API_MAIN_GRID_PAGE = "cczz/v1/home/index";
